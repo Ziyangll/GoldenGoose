@@ -5,6 +5,14 @@
 /*
  * Custom translucent site header
  */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 100px;
+}
+
+.navbar {
+  font-size: 15px;
+}
 
 .site-header {
   background-color: rgba(0, 0, 0, .85);
@@ -23,7 +31,6 @@
 .bg-light{
   background-color: #9df3c4 !important;
 }
-
 
 /*
  * Dummy devices (replace them with your own or something else entirely!)
