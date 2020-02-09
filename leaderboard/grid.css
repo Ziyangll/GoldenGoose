@@ -7,26 +7,25 @@ body {
   font-weight: 400;
 }
 
-.themed-grid-col {
+.table-leaderboard {
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: #1fab89;
-  border: 1px solid #412749;
+  text-align: center;
 }
 
-
-#first .themed-grid-col {
+#first{
   background-color: #ebee50;
 }
 
-#second .themed-grid-col {
+#second{
   background-color: #a6d1d6;
 }
 
-#third .themed-grid-col {
+#third {
   background-color: #c98b3b;
 }
 
-#info .themed-grid-col {
+#info {
   background-color: #808080;
 }
