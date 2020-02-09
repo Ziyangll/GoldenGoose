@@ -71,7 +71,7 @@
   </style>
 </head>
 
-<body data-gr-c-s-loaded="true" data-__gyazo-extension-added-paste-support="true">
+<body onload="load_table()" data-gr-c-s-loaded="true" data-__gyazo-extension-added-paste-support="true">
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
   </script>
@@ -164,46 +164,46 @@
               <tr>
                 <th>Stock</th>
                 <th>Current Price</th>
+                <th>Quantity</th>
+                <th>Total Value</th>
                 <th>Profit</th>
-                <th>Profit Percentage</th>
-                <th>Daily Trend</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Tesla</td>
-                <td>$748.07</td>
-                <td>$48.07</td>
-                <td>↑ 6.43%</td>
-                <td>↓ 0.12%</td>
+                <td id="ta0"></td>
+                <td id="ta1"></td>
+                <td id="ta2"></td>
+                <td id="ta3"></td>
+                <td id="ta4"></td>
               </tr>
               <tr>
-                <td>Apple</td>
-                <td>$320.03</td>
-                <td>-$4.41</td>
-                <td>↓ 1.36%</td>
-                <td>↓ 1.36%</td>
+                <td id="ta5"></td>
+                <td id="ta6"></td>
+                <td id="ta7"></td>
+                <td id="ta8"></td>
+                <td id="ta9"></td>
               </tr>
               <tr>
-                <td>Ford</td>
-                <td>$8.11</td>
-                <td>-$0.89</td>
-                <td>↓ 10%</td>
-                <td>↓ 1.70%</td>
+                <td id="ta10"></td>
+                <td id="ta11"></td>
+                <td id="ta12"></td>
+                <td id="ta13"></td>
+                <td id="ta14"></td>
               </tr>
               <tr>
-                <td>AMD</td>
-                <td>$49.73</td>
-                <td>$0.73</td>
-                <td>↑ 1.46%</td>
-                <td>↑ 0.83%</td>
+                <td id="ta15"></td>
+                <td id="ta16"></td>
+                <td id="ta17"></td>
+                <td id="ta18"></td>
+                <td id="ta19"></td>
               </tr>
               <tr>
-                <td>Micron</td>
-                <td>56.88</td>
-                <td>$1.88</td>
-                <td>↑ 3.31%</td>
-                <td>↓ 3.07%</td>
+                <td id="ta20"></td>
+                <td id="ta21"></td>
+                <td id="ta22"></td>
+                <td id="ta23"></td>
+                <td id="ta24"></td>
               </tr>
               
               
@@ -257,8 +257,7 @@
   <script src="/docs/4.4/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous">
   </script>
-    <script src="dashboard.js"></script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
