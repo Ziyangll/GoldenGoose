@@ -52,6 +52,8 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
 
+  <script src="script.js"></script> 
+
   <nav class="navbar fixed-top navbar-expand-lg navbar-inverse navbar-fixed-top navbar-dark bg-dark">
     <a class="navbar-brand " href="../index.html">GOO$E</a>
     <button class="navbar-toggler collapsed btn-dark" type="button" data-toggle="collapse"
@@ -70,18 +72,15 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="../Stocks/TSLA.html">$TSLA</a>
-            <a class="dropdown-item" href="../Stocks/AAPL.html">$AAPL</a>
-            <a class="dropdown-item" href="../Stocks/AMZN.html">$AMZN</a>
-            <a class="dropdown-item" href="../Stocks/MSFT.html">$MSFT</a>
-            <a class="dropdown-item" href="../Stocks/GOOG.html">$GOOG</a>
-            <a class="dropdown-item" href="../Stocks/FB.html">$FB</a>
+            <a class="dropdown-item" href="#">$AAPL</a>
+            <a class="dropdown-item" href="#">$AMZN</a>
+            <a class="dropdown-item" href="#">$MSFT</a>
+            <a class="dropdown-item" href="#">$GOOG</a>
+            <a class="dropdown-item" href="#">$FB</a>
           </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../leaderboard/index.html">Leaderboard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../dashboard/index.html">Dashboard</a>
         </li>
       </ul>
 
@@ -106,7 +105,7 @@
     <div class="checkbox mb-3">
     </div>
 
-    <a type="submit" on_click="httpGetAsync(writeyes)" class="btn btn-outline-dark btn-lg active btn-block" role="button" aria-pressed="true">Register</a>
+    <a type="submit" onclick="createAccount(inputUser.value,inputPassword.value)" class="btn btn-outline-dark btn-lg active btn-block" role="button" aria-pressed="true">Register</a>
 
     <p>Already have an account?&emsp;&emsp;&emsp;&ensp;<a href="../sign-in/index.html">Sign in</a></p>
     <p class="mt-5 mb-3 text-muted">&copy; Golden Goose Inc. 2020</p>
