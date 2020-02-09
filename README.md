@@ -5,6 +5,6 @@
 
 AUBURN HACKS 2020 Project
 
--Download everything in the github
--$python http-server.py
--open website
+-- Download everything in the github
+-- $python http-server.py
+-- open website
