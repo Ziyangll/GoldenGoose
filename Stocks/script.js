@@ -19,15 +19,18 @@ var chart = am4core.create("chartdiv", am4charts.XYChart);
 
 var data = [];
 var value = 50;
-for(var i = 0; i < 1000; i++){
+for (var i = 0; i < 1000; i++) {
   var date = new Date();
-  date.setHours(0,0,0,0);
+  date.setHours(0, 0, 0, 0);
   date.setDate(i);
   value += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
   if (value < 20) {
     value += Math.random() * 10;
   }
-  data.push({date:date, value: value});
+  data.push({
+    date: date,
+    value: value
+  });
 }
 
 chart.data = data;
