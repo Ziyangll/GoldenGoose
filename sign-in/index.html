@@ -53,6 +53,8 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
 
+  <script src="script.js"></script> 
+
   <nav class="navbar fixed-top navbar-expand-lg navbar-inverse navbar-fixed-top navbar-dark bg-dark">
     <a class="navbar-brand " href="../index.html">GOO$E</a>
     <button class="navbar-toggler collapsed btn-dark" type="button" data-toggle="collapse"
@@ -84,9 +86,6 @@
         <li class="nav-item">
           <a class="nav-link" href="../dashboard/index.html">Dashboard</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../profile/profile.html">Profile</a>
-        </li>
       </ul>
 
       <ul class="navbar-nav mr-right">
@@ -104,16 +103,11 @@
   <form class="form-signin">
     <img class="mb-4" src="../images/logo-with-background.png" alt="Logo" width="288" height="288">
     <label for="username" class="sr-only">username</label>
-    <input type="username" id="username" class="form-control" placeholder="Username" required autofocus>
+    <input type="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div style="text-align:center">
 
-    <a type="submit" class="btn btn-outline-dark btn-lg active btn-block" role="button" aria-pressed="true">Sign In</a>
+    <a type="submit" onclick="login(inputUsername.value,inputPassword.value)" class="btn btn-outline-dark btn-lg active btn-block" role="button" aria-pressed="true">Sign In</a>
 
    
     <a href="../register/index.html">Create an account</a>
