@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>$AMZN</title>
+  <title>$AAPL</title>
   <!-- Favicons -->
 
   <link rel="icon" href="../favicon.ico">
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
   </script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -24,39 +24,34 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
 
+  
+  <script src="script.js"></script>
+
   <nav class="navbar fixed-top navbar-expand-lg navbar-inverse navbar-fixed-top navbar-dark bg-dark">
     <a class="navbar-brand " href="../index.html">GOO$E</a>
+     <form class="form-inline my-2 my-lg-0">
+      <input id=tickerInput class="form-control mr-sm-2" type="search" placeholder="Stock Name" aria-label="Search">
+      <button onclick="draw_graph(tickerInput.value); return false" class="btn btn-outline-success my-2 my-sm-0" type="submit">Load Data</button>
+    </form>
     <button class="navbar-toggler collapsed btn-dark" type="button" data-toggle="collapse"
       data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
       aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <form class="form-inline my-2 my-lg-0">
+      <input id=amountInput class="form-control mr-sm-2" type="search" placeholder="Amount" aria-label="Search">
+      <button onclick="buy_stock(tickerInput.value,amountInput.value); return false" class="btn btn-outline-success my-2 my-sm-0" type="submit">Buy</button>
+      <button onclick="sell_stock(tickerInput.value,amountInput.value); return false" class="btn btn-outline-success my-2 my-sm-0" type="submit">Sell</button>
+    </form>
 
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownZ" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            AMZN
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownZ">
-            <a class="dropdown-item" href="../Stocks/TSLA.html">$TSLA</a>
-            <a class="dropdown-item" href="../Stocks/AAPL.html">$AAPL</a>
-            <a class="dropdown-item" href="../Stocks/AMZN.html">$AMZN</a>
-            <a class="dropdown-item" href="../Stocks/MSFT.html">$MSFT</a>
-            <a class="dropdown-item" href="../Stocks/GOOG.html">$GOOG</a>
-            <a class="dropdown-item" href="../Stocks/FB.html">$FB</a>
-          </div>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="../leaderboard/index.html">Leaderboard</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../dashboard/index.html">Dashboard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../profile/profile.html">Profile</a>
         </li>
       </ul>
 
@@ -71,6 +66,7 @@
       </ul>
     </div>
   </nav>
+
   
   <!-- partial:index.partial.html -->
   <script src="https://www.amcharts.com/lib/4/core.js"></script>
@@ -78,12 +74,13 @@
   <script src="https://www.amcharts.com/lib/4/themes/dark.js"></script>
   <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 
-
+  
 
   <div class="chart">
     <div id="chartdiv"></div>
   </div>
 
+  <!-- partial -->
   
 </body>
 </html>

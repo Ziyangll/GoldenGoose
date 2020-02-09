@@ -9,49 +9,84 @@
  * https://www.amcharts.com/docs/v4/
  * ---------------------------------------
  */
+function draw_graph(ticker) {
+  // Themes begin
+  am4core.useTheme(am4themes_dark);
+  am4core.useTheme(am4themes_animated);
+  // Themes end
 
-// Themes begin
-am4core.useTheme(am4themes_dark);
-am4core.useTheme(am4themes_animated);
-// Themes end
+  var chart = am4core.create("chartdiv", am4charts.XYChart);
+  var date_amts=[-22,-21,-18,-17,-16,-15,-14,-10,-9,-8,-7,-4,-3,-2,-1,0,3,4,5,6,7];
+  var values;
 
-var chart = am4core.create("chartdiv", am4charts.XYChart);
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open("POST", "http://127.0.0.1:8080/graph/", true); // true for asynchronous 
+  xmlHttp.send(JSON.stringify({"ticker":ticker}));
+  xmlHttp.onreadystatechange = function() {
+    if (xmlHttp.readyState == XMLHttpRequest.DONE) {
 
-var data = [];
-var value = 50;
-for (var i = 0; i < 1000; i++) {
-  var date = new Date();
-  date.setHours(0, 0, 0, 0);
-  date.setDate(i);
-  value += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
-  if (value < 20) {
-    value += Math.random() * 10;
+      values=xmlHttp.responseText.split("|");
+      var data = [];
+  for (var i in date_amts) {
+    var date = new Date();
+    date.setHours(0, 0, 0, 0);
+    date.setDate(date_amts[i]);
+
+    data.push({
+      date: date,
+      value: parseFloat(values[i])
+    });
   }
-  data.push({
-    date: date,
-    value: value
-  });
+
+  chart.data = data;
+
+  // Create axes
+  var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+  dateAxis.renderer.minGridDistance = 60;
+
+  var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+
+  // Create series
+  var series = chart.series.push(new am4charts.LineSeries());
+  series.dataFields.valueY = "value";
+  series.dataFields.dateX = "date";
+  series.tooltipText = "{value}"
+
+  series.tooltip.pointerOrientation = "vertical";
+
+  chart.cursor = new am4charts.XYCursor();
+  chart.cursor.snapToSeries = series;
+  chart.cursor.xAxis = dateAxis;
+
+  //chart.scrollbarY = new am4core.Scrollbar();
+  chart.scrollbarX = new am4core.Scrollbar();
+  chart.scrollbarX.parent = chart.bottomAxesContainer;
+  chart.zoomOutButton.align = "right";
+  chart.zoomOutButton.valign = "bottom";
+    }
+  }
+  return false;
 }
 
-chart.data = data;
+function buy_stock(ticker,amount) {
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open("POST", "http://127.0.0.1:8080/buy/", true); // true for asynchronous 
+  xmlHttp.send(JSON.stringify({"ticker":ticker,"quantity":amount}));
+  xmlHttp.onreadystatechange = function() {
+    if (xmlHttp.readyState == XMLHttpRequest.DONE) {
 
-// Create axes
-var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
-dateAxis.renderer.minGridDistance = 60;
+      alert(xmlHttp.responseText);
+    }
+}
+}
 
-var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-
-// Create series
-var series = chart.series.push(new am4charts.LineSeries());
-series.dataFields.valueY = "value";
-series.dataFields.dateX = "date";
-series.tooltipText = "{value}"
-
-series.tooltip.pointerOrientation = "vertical";
-
-chart.cursor = new am4charts.XYCursor();
-chart.cursor.snapToSeries = series;
-chart.cursor.xAxis = dateAxis;
-
-//chart.scrollbarY = new am4core.Scrollbar();
-chart.scrollbarX = new am4core.Scrollbar();
+function sell_stock(ticker,amount) {
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open("POST", "http://127.0.0.1:8080/sell/", true); // true for asynchronous 
+  xmlHttp.send(JSON.stringify({"ticker":ticker,"quantity":amount}));
+  xmlHttp.onreadystatechange = function() {
+    if (xmlHttp.readyState == XMLHttpRequest.DONE) {
+      alert(xmlHttp.responseText);
+    }
+}
+}
