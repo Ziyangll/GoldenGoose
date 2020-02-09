@@ -1,0 +1,37 @@
+.jumbotron {
+  background-color: #62d2a2;
+}
+
+body {
+  padding-top: 3.5rem;
+  background-color: #d7fbe8;
+}
+
+#pfp {
+  float: left;
+}
+
+.display-3 {
+  padding-left: 10rem;
+}
+
+.rank {
+  padding-left: 10.5rem;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  text-align: center;
+}
+
+.colhead {
+  text-decoration: underline;
+}
+
+.money-data {
+  font-size: 35px;
+}
