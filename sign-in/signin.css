@@ -40,9 +40,7 @@ body {
   
 }
 .form-signin input[type="password"] {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   
 }
-.a {
-  text-align: right;
-}
+
