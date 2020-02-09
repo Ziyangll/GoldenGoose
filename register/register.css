@@ -19,9 +19,6 @@ body {
   padding: 15px;
   margin: auto;
 }
-.form-signin .mb-4 {
-  vertical-align: middle !important;
-}
 .form-signin .checkbox {
   font-weight: 400;
 }
@@ -37,12 +34,7 @@ body {
 }
 .form-signin input[type="username"] {
   margin-bottom: 5px;
-  
 }
 .form-signin input[type="password"] {
-  margin-bottom: 5px;
-  
-}
-.a {
-  text-align: right;
+  margin-bottom: 10px;
 }
