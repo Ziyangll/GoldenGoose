@@ -11,6 +11,8 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #9df3c4;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
 }
 
 .form-signin {
@@ -37,4 +39,8 @@ body {
 }
 .form-signin input[type="password"] {
   margin-bottom: 10px;
+}
+
+.right {
+  text-align: center;
 }

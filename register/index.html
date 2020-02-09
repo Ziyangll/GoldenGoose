@@ -9,7 +9,7 @@
   <title>Register</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/sign-in/">
-
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400" rel="stylesheet">
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -42,30 +42,20 @@
 </head>
 
 <body>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-  </script>
+  
 
-  <script src="script.js"></script> 
-
-  <nav class="navbar navbar-expand-lg navbar-inverse navbar-fixed-top navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-inverse fixed-top navbar-dark bg-dark">
     <a class="navbar-brand " href="../index.html">GOO$E</a>
     <button class="navbar-toggler collapsed btn-dark" type="button" data-toggle="collapse"
       data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
       aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <ul class="navbar-nav mr-right">
+    <ul class="navbar-nav">
       <li class="nav-item"></li>
     </ul>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <ul class="navbar-nav mr-right">
+      <ul class="navbar-nav ml-auto">
 
         <li class="nav-item">
           <a class="nav-link" href="../sign-in/index.html">Login</a>
@@ -77,6 +67,18 @@
     </div>
   </nav>
 
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+
+  <script src="script.js"></script>
+
   <form class="form-signin">
     <img class="mb-4" src="../images/logo-with-background.png" alt="Logo" width="288" height="288">
     <label for="inputUser" class="sr-only">Username</label>
@@ -86,9 +88,13 @@
     <div class="checkbox mb-3">
     </div>
 
-    <a type="submit" onclick="createAccount(inputUser.value,inputPassword.value)" class="btn btn-outline-dark btn-lg active btn-block" role="button" aria-pressed="true">Register</a>
+    <a type="submit" onclick="createAccount(inputUser.value,inputPassword.value)"
+      class="btn btn-outline-dark btn-lg active btn-block" role="button" aria-pressed="true">Register</a>
 
-    <p>Already have an account?&emsp;&emsp;&emsp;&ensp;<a href="../sign-in/index.html">Sign in</a></p>
+    <div class="mt-3 right">
+    <p>Already have an account?</p>
+    <a href="../sign-in/index.html">Sign in</a>
+    </div>
     <p class="mt-5 mb-3 text-muted">&copy; Golden Goose Inc. 2020</p>
   </form>
 </body>
