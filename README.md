@@ -3,12 +3,12 @@
 
 [GoldenGoose](http://goldengoose.tech)
 
-AUBURN HACKS 2020 Project
+AUBURN HACKS 2020 Best Overall Winner
 
 
 # How to use
 
-- $git clone the github
+- $git clone https://github.com/Ziyangll/GoldenGoose.git
 
 - $python http_server.py
 
