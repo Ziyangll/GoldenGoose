@@ -1,6 +1,11 @@
 
 # Golden Goose (The Future of Investing)
 
+[![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=success&up_message=online&url=http%3A%2F%2Fgoldengoose.tech)](http://goldengoose.tech)
+[![GitHub language count](https://img.shields.io/github/languages/count/ziyangll/GoldenGoose)](http://goldengoose.tech)
+[![GitHub top language](https://img.shields.io/github/languages/top/ziyangll/GoldenGoose)](http://goldengoose.tech)
+
+
 [GoldenGoose](http://goldengoose.tech)
 
 AUBURN HACKS 2020 Best Overall Winner
