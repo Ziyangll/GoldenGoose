@@ -10,6 +10,9 @@
 
 AUBURN HACKS 2020 Best Overall Winner
 
+Frontend with Bootstrap4, HTML5, and CSS3.
+Backend with flask, google cloud platform, and mongoDB.
+
 
 # How to use
 
