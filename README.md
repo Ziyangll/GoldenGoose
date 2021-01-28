@@ -20,4 +20,4 @@ Backend with flask, google cloud platform, and mongoDB.
 
 - $python http_server.py
 
-- open index.html
+- use http-server if hosting else just open index.html
